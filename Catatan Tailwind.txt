@@ -1,0 +1,32 @@
+install Tailwind :
+
+1. Buka Terminal
+    a. npm init -y
+    b. npm -D tailwindcss postcss autoprefixer
+    c. npx tailwindcss init
+
+2. Buat folder public yang berisi index.html dan js
+
+3. Buat lagi folder src yang berisi input.css
+
+4. Copy ini untuk di letakkan di input.css
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+5. Buka tailwind.config.js ketik pada content
+    content: ['./public/**/*.{html,js}'],
+
+6. Buka package.json lalu hapus bagian error di bagian "scripts"
+
+7. Lalu copy ini di bagian "scripts"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/css/style.css --watch"
+
+8. Lalu ketik npm run dev pada terminal jika ingin mengubah index
+
+9. Jika project sudah selesai minify file style css dengan mengetik pada terminal
+    npx tailwindcss -o ./public/css/final.css --minify
+
+10. Lalu ubah link pada title menjadi
+    <link rel="stylesheet"  href="css/final.cc"/>
+
